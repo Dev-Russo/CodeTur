@@ -1,0 +1,12 @@
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\bin\Debug\netcoreapp3.1\CodeTur.Comum.dll
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\obj\Debug\netcoreapp3.1\Codetur.Dominio.csprojAssemblyReference.cache
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\obj\Debug\netcoreapp3.1\Codetur.Dominio.AssemblyInfoInputs.cache
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\obj\Debug\netcoreapp3.1\Codetur.Dominio.AssemblyInfo.cs
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\bin\Debug\netcoreapp3.1\Codetur.Dominio.deps.json
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\bin\Debug\netcoreapp3.1\Codetur.Dominio.dll
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\bin\Debug\netcoreapp3.1\Codetur.Dominio.pdb
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\bin\Debug\netcoreapp3.1\CodeTur.Comum.pdb
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\obj\Debug\netcoreapp3.1\Codetur.Dominio.csproj.CoreCompileInputs.cache
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\obj\Debug\netcoreapp3.1\Codetur.Dominio.csproj.CopyComplete
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\obj\Debug\netcoreapp3.1\Codetur.Dominio.dll
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\Codetur.Dominio\obj\Debug\netcoreapp3.1\Codetur.Dominio.pdb

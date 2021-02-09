@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "yXY93BcM/e6aXgE0ml7rWLEMgTf/Hjprnh+h7m8MehRrrfQyJN7Lx6mZF92k0fUJDeJda7lPSE/BCVduzlAtUw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\muril\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
+    "C:\\Users\\muril\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
+    "C:\\Users\\muril\\.nuget\\packages\\flunt.br\\1.4.0\\flunt.br.1.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

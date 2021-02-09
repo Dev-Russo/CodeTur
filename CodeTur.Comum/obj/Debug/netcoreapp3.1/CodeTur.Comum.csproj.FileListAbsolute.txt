@@ -1,0 +1,9 @@
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\CodeTur.Comum\bin\Debug\netcoreapp3.1\CodeTur.Comum.deps.json
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\CodeTur.Comum\bin\Debug\netcoreapp3.1\CodeTur.Comum.dll
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\CodeTur.Comum\bin\Debug\netcoreapp3.1\CodeTur.Comum.pdb
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\CodeTur.Comum\obj\Debug\netcoreapp3.1\CodeTur.Comum.csprojAssemblyReference.cache
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\CodeTur.Comum\obj\Debug\netcoreapp3.1\CodeTur.Comum.AssemblyInfoInputs.cache
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\CodeTur.Comum\obj\Debug\netcoreapp3.1\CodeTur.Comum.AssemblyInfo.cs
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\CodeTur.Comum\obj\Debug\netcoreapp3.1\CodeTur.Comum.csproj.CoreCompileInputs.cache
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\CodeTur.Comum\obj\Debug\netcoreapp3.1\CodeTur.Comum.dll
+D:\Users\gusta\Desktop\3SPRINT-SENAI\Codetur-Api\CodeTur\CodeTur.Comum\obj\Debug\netcoreapp3.1\CodeTur.Comum.pdb
