@@ -7,7 +7,7 @@ using System;
 
 namespace Codetur.Dominio.Handlers.Pacotes
 {
-    class CriarPacoteCommandHandle : IHandlerCommand<CriarPacoteCommand>
+    public class CriarPacoteCommandHandle : IHandlerCommand<CriarPacoteCommand>
     {
         private readonly IPacoteRepositorio _pacoteRepositorio;
 

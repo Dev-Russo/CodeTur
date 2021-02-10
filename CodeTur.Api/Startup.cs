@@ -1,5 +1,6 @@
 using Codetur.Dominio.Handlers.Usuarios;
 using Codetur.Dominio.Repositorios;
+using CodeTur.Dominio.Handlers.Pacotes;
 using CodeTur.Dominio.Handlers.Usuarios;
 using CodeTur.Infra.Data.Contexts;
 using CodeTur.Infra.Data.Repositorios;
@@ -59,6 +60,7 @@ namespace CodeTur.Api
             services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
             services.AddTransient<CriarContaHandle, CriarContaHandle>();
             services.AddTransient<LogarHandle, LogarHandle>();
+            services.AddTransient<ListarPacoteQueryHandle>();
             #endregion
         }
 

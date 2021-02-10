@@ -1,7 +1,8 @@
-﻿using CodeTur.Comum.Commands;
+﻿using Codetur.Dominio.Commands.Pacotes;
+using Codetur.Dominio.Handlers.Pacotes;
+using CodeTur.Comum.Commands;
 using CodeTur.Comum.Enum;
 using CodeTur.Comum.Queries;
-using CodeTur.Dominio.Commands.Pacote;
 using CodeTur.Dominio.Handlers.Pacotes;
 using CodeTur.Dominio.Queries.Pacote;
 using Microsoft.AspNetCore.Authorization;
@@ -18,7 +19,7 @@ namespace CodeTur.Api.Controllers
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public GenericCommandResult Create(CriarPacoteCommand command,
-            [FromServices] CriarPacoteCommandHandle handle)
+                                           [FromServices] CriarPacoteCommandHandle handle)
         {
             return (GenericCommandResult)handle.Handle(command);
         }

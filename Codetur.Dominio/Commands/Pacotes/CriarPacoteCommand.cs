@@ -4,7 +4,7 @@ using Flunt.Validations;
 
 namespace Codetur.Dominio.Commands.Pacotes
 {
-    class CriarPacoteCommand : Notifiable, ICommand
+    public class CriarPacoteCommand : Notifiable, ICommand
     {
         public CriarPacoteCommand(string titulo, string descricao, string imagem, bool ativo)
         {
