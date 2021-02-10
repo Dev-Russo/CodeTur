@@ -22,3 +22,15 @@ C:\Users\47759989865\Desktop\Codetur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\Code
 C:\Users\47759989865\Desktop\Codetur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\CodeTur.Comum.dll
 C:\Users\47759989865\Desktop\Codetur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\ref\CodeTur.Comum.dll
 C:\Users\47759989865\Desktop\Codetur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\CodeTur.Comum.pdb
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\bin\Debug\net5.0\CodeTur.Comum.deps.json
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\bin\Debug\net5.0\CodeTur.Comum.dll
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\bin\Debug\net5.0\ref\CodeTur.Comum.dll
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\bin\Debug\net5.0\CodeTur.Comum.pdb
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\CodeTur.Comum.csprojAssemblyReference.cache
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\CodeTur.Comum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\CodeTur.Comum.AssemblyInfoInputs.cache
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\CodeTur.Comum.AssemblyInfo.cs
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\CodeTur.Comum.csproj.CoreCompileInputs.cache
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\CodeTur.Comum.dll
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\ref\CodeTur.Comum.dll
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Comum\obj\Debug\net5.0\CodeTur.Comum.pdb

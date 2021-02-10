@@ -35,7 +35,7 @@ namespace CodeTur.Api
                 options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
             });
 
-            services.AddDbContext<CodeTurContext>(o => o.UseSqlServer("Data Source=DESKTOP-DNA4IPP ;Initial Catalog=CodeTur_Dev; Database=CodeTur;Trusted_Connection=True;"));
+            services.AddDbContext<CodeTurContext>(o => o.UseSqlServer("Data Source=PC-MURILO\\SQLEXPRESS ;Initial Catalog=CodeTur_Dev;user id=sa; password=sa132"));
             // JWT
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>

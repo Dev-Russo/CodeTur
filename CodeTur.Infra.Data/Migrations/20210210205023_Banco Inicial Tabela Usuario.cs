@@ -12,9 +12,9 @@ namespace CodeTur.Infra.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Titulo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Imagem = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Titulo = table.Column<string>(type: "varchar(120)", maxLength: 120, nullable: false),
+                    Descricao = table.Column<string>(type: "Text", nullable: false),
+                    Imagem = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false),
                     Ativo = table.Column<bool>(type: "bit", nullable: false),
                     DataCriacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataAlteracao = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -34,8 +34,8 @@ namespace CodeTur.Infra.Data.Migrations
                     Senha = table.Column<string>(type: "varchar(60)", maxLength: 60, nullable: false),
                     Telefone = table.Column<string>(type: "varchar(11)", maxLength: 11, nullable: true),
                     TipoUsuario = table.Column<int>(type: "int", nullable: false),
-                    DataCriacao = table.Column<DateTime>(type: "DateTime", nullable: false),
-                    DataAlteracao = table.Column<DateTime>(type: "DateTime", nullable: false)
+                    DataCriacao = table.Column<DateTime>(type: "DateTime", nullable: false, defaultValueSql: "GetDate()"),
+                    DataAlteracao = table.Column<DateTime>(type: "DateTime", nullable: false, defaultValueSql: "GetDate()")
                 },
                 constraints: table =>
                 {
@@ -47,12 +47,11 @@ namespace CodeTur.Infra.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Texto = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Sentimento = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Texto = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
+                    Sentimento = table.Column<string>(type: "varchar(40)", maxLength: 40, nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     IdUsuario = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdPacote = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PacoteId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DataCriacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataAlteracao = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -60,11 +59,11 @@ namespace CodeTur.Infra.Data.Migrations
                 {
                     table.PrimaryKey("PK_Comentarios", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comentarios_Pacotes_PacoteId",
-                        column: x => x.PacoteId,
+                        name: "FK_Comentarios_Pacotes_IdPacote",
+                        column: x => x.IdPacote,
                         principalTable: "Pacotes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Comentarios_Usuarios_IdUsuario",
                         column: x => x.IdUsuario,
@@ -74,14 +73,14 @@ namespace CodeTur.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Comentarios_IdPacote",
+                table: "Comentarios",
+                column: "IdPacote");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Comentarios_IdUsuario",
                 table: "Comentarios",
                 column: "IdUsuario");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Comentarios_PacoteId",
-                table: "Comentarios",
-                column: "PacoteId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
