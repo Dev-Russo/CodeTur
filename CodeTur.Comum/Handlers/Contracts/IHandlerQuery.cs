@@ -1,14 +1,9 @@
-﻿using CodeTur.Comum.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CodeTur.Comum.Queries;
 
 namespace CodeTur.Comum.Handlers.Contracts
 {
-    public class IHandlerQuery 
+    public interface IHandlerQuery<T> where T : IQuery
     {
-
+        IQueryResult Handle(T query);
     }
 }
