@@ -211,3 +211,8 @@ C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Testes\obj\D
 C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Testes\obj\Debug\net5.0\ref\CodeTur.Testes.dll
 C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Testes\obj\Debug\net5.0\CodeTur.Testes.pdb
 C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\CodeTur.Testes\obj\Debug\net5.0\CodeTur.Testes.genruntimeconfig.cache
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\CodeTur.Testes\obj\Debug\net5.0\CodeTur.Testes.csprojAssemblyReference.cache
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\CodeTur.Testes\obj\Debug\net5.0\CodeTur.Testes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\CodeTur.Testes\obj\Debug\net5.0\CodeTur.Testes.AssemblyInfoInputs.cache
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\CodeTur.Testes\obj\Debug\net5.0\CodeTur.Testes.AssemblyInfo.cs
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\CodeTur.Testes\obj\Debug\net5.0\CodeTur.Testes.csproj.CoreCompileInputs.cache

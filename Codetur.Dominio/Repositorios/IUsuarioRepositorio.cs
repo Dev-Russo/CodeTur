@@ -10,7 +10,7 @@ namespace Codetur.Dominio.Repositorios
         void Alterar(Usuario usuario);
         Usuario BuscarPorEmail(string email);
         Usuario BuscarPorId(Guid id);
-        ICollection<Usuario> Listar(bool? Ativo = null);
+        IEnumerable<Usuario> Listar(bool? Ativo = null);
 
 
     }

@@ -1,5 +1,6 @@
 using Codetur.Dominio.Handlers.Usuarios;
 using Codetur.Dominio.Repositorios;
+using CodeTur.Comum.Handlers.Contracts;
 using CodeTur.Dominio.Handlers.Pacotes;
 using CodeTur.Dominio.Handlers.Usuarios;
 using CodeTur.Infra.Data.Contexts;
@@ -36,7 +37,15 @@ namespace CodeTur.Api
                 options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
             });
 
+            #region Injeção Dependência Usuário
+            services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
+            services.AddTransient<CriarContaHandle, CriarContaHandle>();
+            services.AddTransient<LogarHandle, LogarHandle>();
+            services.AddTransient<ListarPacoteQueryHandle, ListarPacoteQueryHandle>();
+            services.AddTransient<IPacoteRepositorio, PacoteRepositorio>();
+            #endregion
             services.AddDbContext<CodeTurContext>(o => o.UseSqlServer("Data Source=PC-MURILO\\SQLEXPRESS ;Initial Catalog=CodeTur_Dev;user id=sa; password=sa132"));
+
             // JWT
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -56,12 +65,7 @@ namespace CodeTur.Api
                 o.SwaggerDoc("v1", new OpenApiInfo { Title = "Api CodeTur", Version = "V1" })
             );
 
-            #region Injeção Dependência Usuário
-            services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
-            services.AddTransient<CriarContaHandle, CriarContaHandle>();
-            services.AddTransient<LogarHandle, LogarHandle>();
-            services.AddTransient<ListarPacoteQueryHandle>();
-            #endregion
+            
         }
 
 

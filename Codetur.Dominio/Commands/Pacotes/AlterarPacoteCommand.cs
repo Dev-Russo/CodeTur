@@ -5,7 +5,7 @@ using System;
 
 namespace Codetur.Dominio.Commands.Pacotes
 {
-    class AlterarPacoteCommand : Notifiable, ICommand
+    public class AlterarPacoteCommand : Notifiable, ICommand
     {
         public Guid Id { get; set; }
         public string Titulo { get; set; }

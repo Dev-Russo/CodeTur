@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CodeTur.Comum\CodeTur.Comum.csproj" />
     <ProjectReference Include="..\Codetur.Dominio\Codetur.Dominio.csproj" />
     <ProjectReference Include="..\CodeTur.Infra.Data\CodeTur.Infra.Data.csproj" />
   </ItemGroup>

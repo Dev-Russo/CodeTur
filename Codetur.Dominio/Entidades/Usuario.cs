@@ -9,6 +9,11 @@ namespace Codetur.Dominio.Entidades
 {
     public class Usuario : Entidade
     {
+        public Usuario()
+        {
+
+        }
+
         public Usuario(string nome, string email, string senha, EnTipoUsuario tipoUsuario)
         {
             AddNotifications(new Contract()
@@ -18,7 +23,8 @@ namespace Codetur.Dominio.Entidades
                 .IsEmail(email, "Email", "Informe um e-mail válido+")
                 .HasMinLen(senha, 6, "Senha", "A senha deve ter pelo menos 6 caracteres")
             );
-            if (Valid){
+            if (Valid)
+            {
                 Nome = nome;
                 Email = email;
                 Senha = senha;
@@ -26,7 +32,7 @@ namespace Codetur.Dominio.Entidades
             }
         }
 
-        public string Nome{ get; private set; }
+        public string Nome { get; private set; }
         public string Email { get; private set; }
         public string Senha { get; private set; }
         public string Telefone { get; private set; }
@@ -40,8 +46,8 @@ namespace Codetur.Dominio.Entidades
                 .IsNewFormatCellPhone(telefone, "Telefone", "Informe um telefone válido")
             );
 
-            if(Valid)
-            Telefone = telefone;
+            if (Valid)
+                Telefone = telefone;
         }
         public void AlterarSenha(string senha)
         {
@@ -63,13 +69,14 @@ namespace Codetur.Dominio.Entidades
             .IsEmail(email, "Email", "Informe um e-mail válido+")
 
             );
-            if(Valid)
+            if (Valid)
             {
                 Nome = nome;
                 Email = email;
-                   
+
             }
 
         }
     }
 }
+

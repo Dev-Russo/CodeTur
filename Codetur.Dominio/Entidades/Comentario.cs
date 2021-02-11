@@ -8,6 +8,11 @@ namespace CodeTur.Dominio.Entidades
 {
     public class Comentario : Entidade
     {
+        public Comentario()
+        {
+
+        }
+
         public Comentario(string texto, string sentimento, Guid idUsuario, Guid idPacote, EnStatusComentario status)
         {
             AddNotifications(new Contract()

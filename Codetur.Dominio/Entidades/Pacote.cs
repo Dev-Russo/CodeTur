@@ -7,6 +7,11 @@ namespace CodeTur.Dominio.Entidades
 {
     public class Pacote : Entidade
     {
+        public Pacote()
+        {
+
+        }
+
         private readonly List<Comentario> _comentarios;
         public Pacote(string titulo, string descricao, string imagem, bool ativo)
         {
@@ -42,14 +47,9 @@ namespace CodeTur.Dominio.Entidades
                 _comentarios.Add(comentario);
         }
 
-        public void AtivarPacote()
+        public void AlterarStatus(bool ativo)
         {
-            Ativo = true;
-        }
-
-        public void DesativarPacote()
-        {
-            Ativo = false;
+            Ativo = ativo;
         }
 
         public void AtualizaPacote(string titulo, string descricao)

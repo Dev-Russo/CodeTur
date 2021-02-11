@@ -1,14 +1,17 @@
 ﻿using Codetur.Dominio.Commands.Usuarios;
 using Codetur.Dominio.Entidades;
-using Codetur.Dominio.Handlers.Usuarios;
 using CodeTur.Comum.Commands;
-using CodeTur.Dominio.Handlers.Usuarios;
+using CodeTur.Dominio.Commands.Usuario;
+using CodeTur.Dominio.Handlers.Queries.Usuario;
+using CodeTur.Dominio.Handlers.Usuario;
+using CodeTur.Dominio.Queries.Usuario;
+using CodeTur.Shared.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+using System.Linq;
 
 namespace CodeTur.Api.Controllers
 {
@@ -16,55 +19,117 @@ namespace CodeTur.Api.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
+        public IConfiguration Configuration { get; }
+
+        public UsuarioController(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        [Route("users")]
+        [HttpGet]
+        public GenericCommandResult GetAll(
+            [FromServices] ListarUsuarioQueryHandler handler
+        )
+        {
+            //command.User = User.Claims.FirstOrDefault(x => x.Type == "user_id")?.Value;
+            var query = new ListarUsuarioQuery();
+            return (GenericCommandResult)handler.Handle(query);
+        }
+
+        [Route("users/{id}")]
+        [HttpGet]
+        public GenericCommandResult GetByIdUser(Guid id,
+            [FromServices] BuscarUsuarioPorIdQueryHandler handler
+        )
+        {
+            //command.User = User.Claims.FirstOrDefault(x => x.Type == "user_id")?.Value;
+            var query = new BuscarUsuarioPorIdQuery();
+            query.IdUsuario = id;
+            return (GenericCommandResult)handler.Handle(query);
+        }
+
         [Route("signup")]
         [HttpPost]
-        public GenericCommandResult SignUp(CriarContaCommand command, [FromServices] CriarContaHandle handler)
+        public GenericCommandResult Register(
+            [FromBody] CriarContaCommand command,
+            [FromServices] CriarContaCommandHandler handler
+        )
         {
+            //command.User = User.Claims.FirstOrDefault(x => x.Type == "user_id")?.Value;
             return (GenericCommandResult)handler.Handle(command);
         }
 
         [Route("signin")]
         [HttpPost]
-
-        public GenericCommandResult SignIn(LogarCommand command, [FromServices] LogarHandle handler)
+        public GenericCommandResult SignIn(
+            [FromBody] LogarCommand command,
+            [FromServices] LogarCommandHandler handler
+        )
         {
             var resultado = (GenericCommandResult)handler.Handle(command);
 
-            if(resultado.Sucesso)
+            if (resultado.Sucesso)
             {
-                var token = GerarJSONWebToken((Usuario)resultado.Data);
+                Usuario usuario = (Usuario)resultado.Data;
+                var token = new Token(
+                                        Configuration["Token:issuer"],
+                                        Configuration["Token:audience"],
+                                        Configuration["Token:secretKey"]
+                                     )
+                                     .GerarJsonWebToken(
+                                        usuario.Id,
+                                        usuario.Nome,
+                                        usuario.Email,
+                                        usuario.TipoUsuario.ToString()
+                                     );
 
-                return new GenericCommandResult(resultado.Sucesso, resultado.Mensagem, new { token = token });
+                return new GenericCommandResult(true, "Usuário logado", new { token = token });
             }
 
-            return new GenericCommandResult(false, resultado.Mensagem, resultado.Data);
+            return resultado;
         }
-        private string GerarJSONWebToken(Usuario userInfo)
+
+        [Route("reset-password")]
+        [HttpPut]
+        public GenericCommandResult ResetPassword(
+            [FromBody] ResetarSenhaCommand command,
+            [FromServices] ResetarSenhaCommandHandler handler
+        )
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ChaveSecretaCodeTurSenai132"));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            var resultado = (GenericCommandResult)handler.Handle(command);
 
-            // Definimos nossas Claims (dados da sessão) para poderem ser capturadas
-            // a qualquer momento enquanto o Token for ativo
-            var claims = new[] {
-                new Claim(JwtRegisteredClaimNames.FamilyName, userInfo.Nome),
-                new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
-                new Claim(ClaimTypes.Role, userInfo.TipoUsuario.ToString()),
-                new Claim("role", userInfo.TipoUsuario.ToString()),
-                new Claim(JwtRegisteredClaimNames.Jti, userInfo.Id.ToString())
-            };
-
-            // Configuramos nosso Token e seu tempo de vida
-            var token = new JwtSecurityToken
-                (
-                    "codetur",
-                    "codetur",
-                    claims,
-                    expires: DateTime.Now.AddMinutes(120),
-                    signingCredentials: credentials
-                );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            return resultado;
         }
+
+        [Route("update-password")]
+        [Authorize]
+        [HttpPut]
+        public GenericCommandResult UpdatePassword(
+           [FromBody] AlterarSenhaCommand command,
+           [FromServices] AlterarSenhaCommandHandler handler
+       )
+        {
+            var idUsuario = HttpContext.User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Jti);
+            command.IdUsuario = new Guid(idUsuario.Value);
+
+            return (GenericCommandResult)handler.Handle(command);
+        }
+
+        [Route("")]
+        [Authorize]
+        [HttpPut]
+        public GenericCommandResult UpdateAccount(
+           [FromBody] AlterarUsuarioCommand command,
+           [FromServices] AlterarUsuarioCommandHandler handler
+       )
+        {
+            var idUsuario = HttpContext.User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Jti);
+            command.IdUsuario = new Guid(idUsuario.Value);
+
+            return (GenericCommandResult)handler.Handle(command);
+        }
+
+
     }
 }

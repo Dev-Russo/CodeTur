@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj": {}
+    "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj": {
+    "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
+        "projectUniqueName": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
         "projectName": "CodeTur.Comum",
-        "projectPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
+        "projectPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
         "packagesPath": "C:\\Users\\muril\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\CodeTur.Comum\\obj\\",
+        "outputPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\CodeTur.Comum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\muril\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,6 +47,14 @@
             "Flunt": {
               "target": "Package",
               "version": "[1.0.5, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
             }
           },
           "imports": [
@@ -68,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj": {
+    "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj",
         "projectName": "Codetur.Dominio",
-        "projectPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj",
+        "projectPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj",
         "packagesPath": "C:\\Users\\muril\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\Codetur.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\Codetur.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\muril\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,8 +100,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj": {
-                "projectPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj"
+              "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj": {
+                "projectPath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj"
               }
             }
           }

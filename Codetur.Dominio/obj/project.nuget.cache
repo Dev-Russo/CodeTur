@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "yXY93BcM/e6aXgE0ml7rWLEMgTf/Hjprnh+h7m8MehRrrfQyJN7Lx6mZF92k0fUJDeJda7lPSE/BCVduzlAtUw==",
+  "dgSpecHash": "VM8R+b7zSu5djwKSzBLMApwzSLBK/fwoTWSvhLA0Oe/kDoPajBfe5oltaMOGyhsz8WQuA/BEmJGGfTmem+iXdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\muril\\OneDrive\\Documentos\\Projetos\\CodeTurBase\\CodeTur\\CodeTur\\Codetur.Dominio\\Codetur.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\muril\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\muril\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
-    "C:\\Users\\muril\\.nuget\\packages\\flunt.br\\1.4.0\\flunt.br.1.4.0.nupkg.sha512"
+    "C:\\Users\\muril\\.nuget\\packages\\flunt.br\\1.4.0\\flunt.br.1.4.0.nupkg.sha512",
+    "C:\\Users\\muril\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\muril\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.8.0\\microsoft.identitymodel.jsonwebtokens.6.8.0.nupkg.sha512",
+    "C:\\Users\\muril\\.nuget\\packages\\microsoft.identitymodel.logging\\6.8.0\\microsoft.identitymodel.logging.6.8.0.nupkg.sha512",
+    "C:\\Users\\muril\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
+    "C:\\Users\\muril\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
+    "C:\\Users\\muril\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

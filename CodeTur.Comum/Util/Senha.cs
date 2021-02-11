@@ -25,6 +25,5 @@ namespace CodeTur.Comum.Util
 
             return senha;
         }
-
     }
     }

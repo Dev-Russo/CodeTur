@@ -43,3 +43,8 @@ C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\Codetur.Dominio\obj\
 C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\Codetur.Dominio\obj\Debug\net5.0\Codetur.Dominio.dll
 C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\Codetur.Dominio\obj\Debug\net5.0\ref\Codetur.Dominio.dll
 C:\Users\muril\OneDrive\Documentos\Projetos\CodeTur\CodeTur\Codetur.Dominio\obj\Debug\net5.0\Codetur.Dominio.pdb
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\Codetur.Dominio\obj\Debug\net5.0\Codetur.Dominio.csprojAssemblyReference.cache
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\Codetur.Dominio\obj\Debug\net5.0\Codetur.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\Codetur.Dominio\obj\Debug\net5.0\Codetur.Dominio.AssemblyInfoInputs.cache
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\Codetur.Dominio\obj\Debug\net5.0\Codetur.Dominio.AssemblyInfo.cs
+C:\Users\muril\OneDrive\Documentos\Projetos\CodeTurBase\CodeTur\CodeTur\Codetur.Dominio\obj\Debug\net5.0\Codetur.Dominio.csproj.CoreCompileInputs.cache
