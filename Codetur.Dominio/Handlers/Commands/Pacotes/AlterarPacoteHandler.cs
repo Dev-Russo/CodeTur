@@ -1,7 +1,7 @@
-﻿using Codetur.Dominio.Commands.Pacotes;
-using Codetur.Dominio.Repositorios;
+﻿using Codetur.Dominio.Repositorios;
 using CodeTur.Comum.Commands;
 using CodeTur.Comum.Handlers.Contracts;
+using CodeTur.Dominio.Commands.Pacote;
 using Flunt.Notifications;
 
 namespace CodeTur.Dominio.Handlers.Pacote
@@ -26,7 +26,7 @@ namespace CodeTur.Dominio.Handlers.Pacote
 
             //Faz a Verificação para evitar que email se repitam
 
-            var pacote = _repositorio.BuscarPorId(command.Id);
+            var pacote = _repositorio.BuscarPorId(command.IdPacote);
 
             if (pacote == null)
                 return new GenericCommandResult(false, "Pacote não encontrado", null);

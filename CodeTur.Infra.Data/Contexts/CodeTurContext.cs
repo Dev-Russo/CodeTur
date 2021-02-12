@@ -63,8 +63,8 @@ namespace CodeTur.Infra.Data.Contexts
             modelBuilder.Entity<Pacote>().Property(x => x.Descricao).HasColumnType("Text");
             modelBuilder.Entity<Pacote>().Property(x => x.Descricao).IsRequired();
             //Imagem
-            modelBuilder.Entity<Pacote>().Property(x => x.Imagem).HasMaxLength(250);
-            modelBuilder.Entity<Pacote>().Property(x => x.Imagem).HasColumnType("varchar(350)");
+            modelBuilder.Entity<Pacote>().Property(x => x.Imagem).HasMaxLength(1000);
+            modelBuilder.Entity<Pacote>().Property(x => x.Imagem).HasColumnType("varchar(1000)");
             modelBuilder.Entity<Pacote>().Property(x => x.Imagem).IsRequired();
             //Ativo
             modelBuilder.Entity<Pacote>().Property(x => x.Ativo).HasColumnType("bit");

@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace CodeTur.Dominio.Handlers.Queries.Pacote
 {
-    public class ListarPacoteQueryHandler : IHandlerQuery<ListarPacotesQuery>
+    public class ListarPacoteQueryHandler : IHandlerQuery<ListarPacoteQuery>
     {
         private readonly IPacoteRepositorio _repositorio;
 
@@ -17,7 +17,7 @@ namespace CodeTur.Dominio.Handlers.Queries.Pacote
         }
 
 
-        public ICommandResult Handle(ListarPacotesQuery query)
+        public ICommandResult Handle(ListarPacoteQuery query)
         {
             var pacotes = _repositorio.Listar(query.Ativo);
 
@@ -30,6 +30,7 @@ namespace CodeTur.Dominio.Handlers.Queries.Pacote
                         Titulo = x.Titulo,
                         Descricao = x.Descricao,
                         Ativo = x.Ativo,
+                        Imagem = x.Imagem,
                         QuantidadeComentarios = x.Comentarios.Count
                     };
                 }
@@ -38,7 +39,7 @@ namespace CodeTur.Dominio.Handlers.Queries.Pacote
             return new GenericCommandResult(true, "Usuários", Pacotes);
         }
 
-        IQueryResult IHandlerQuery<ListarPacotesQuery>.Handle(ListarPacotesQuery query)
+        IQueryResult IHandlerQuery<ListarPacoteQuery>.Handle(ListarPacoteQuery query)
         {
             throw new System.NotImplementedException();
         }

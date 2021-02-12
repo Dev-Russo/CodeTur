@@ -3,7 +3,7 @@ using System;
 
 namespace CodeTur.Dominio.Queries.Pacote
 {
-    public class ListarPacotesQuery : IQuery
+    public class ListarPacoteQuery : IQuery
     {
         public bool? Ativo { get; set; } = null;
         public void Validar()

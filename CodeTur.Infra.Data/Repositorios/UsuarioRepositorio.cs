@@ -35,10 +35,11 @@ namespace CodeTur.Infra.Data.Repositorios
 
         public Usuario BuscarPorId(Guid id)
         {
-            return _context.Usuarios.FirstOrDefault(x => x.Id == id);
+
+            return _context.Usuarios.Include("Comentarios").FirstOrDefault(x => x.Id == id);
         }
 
-        public ICollection<Usuario> Listar(bool? Ativo = null)
+        IEnumerable<Usuario> IUsuarioRepositorio.Listar(bool? Ativo)
         {
             return _context
                            .Usuarios

@@ -3,24 +3,34 @@ using Flunt.Notifications;
 using Flunt.Validations;
 using System;
 
-namespace Codetur.Dominio.Commands.Pacotes
+namespace CodeTur.Dominio.Commands.Pacote
 {
     public class AlterarPacoteCommand : Notifiable, ICommand
     {
-        public Guid Id { get; set; }
+        public AlterarPacoteCommand()
+        {
+
+        }
+
+        public AlterarPacoteCommand(Guid idPacote, string titulo, string descricao)
+        {
+            IdPacote = idPacote;
+            Titulo = titulo;
+            Descricao = descricao;
+        }
+
+        public Guid IdPacote { get; set; }
         public string Titulo { get; set; }
         public string Descricao { get; set; }
-        public string Imagem { get; set; }
-        public bool Ativo { get; set; }
 
         public void Validar()
         {
             AddNotifications(new Contract()
-                .Requires()
-                .IsNotNullOrEmpty(Titulo, "Titulo", "Informe o Título do pacote")
-                .IsNotNullOrEmpty(Descricao, "Descricao", "Informe o Descrição do pacote")
-                .IsNotNullOrEmpty(Imagem, "Imagem", "Informe o Imagem do pacote")
-            );
+               .Requires()
+               .AreNotEquals(IdPacote, Guid.Empty, "IdPacote", "Id do pacote inválido")
+               .IsNotNullOrEmpty(Titulo, "Titulo", "Informe o Título do pacote")
+               .IsNotNullOrEmpty(Descricao, "Descricao", "Informe a Descrição do pacote")
+           );
         }
     }
 }

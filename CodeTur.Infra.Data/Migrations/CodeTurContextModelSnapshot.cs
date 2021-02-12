@@ -80,8 +80,8 @@ namespace CodeTur.Infra.Data.Migrations
 
                     b.Property<string>("Imagem")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("varchar(250)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<string>("Titulo")
                         .IsRequired()

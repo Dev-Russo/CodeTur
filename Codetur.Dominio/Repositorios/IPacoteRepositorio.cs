@@ -1,5 +1,4 @@
-﻿using Codetur.Dominio.Entidades;
-using CodeTur.Dominio.Entidades;
+﻿using CodeTur.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
 

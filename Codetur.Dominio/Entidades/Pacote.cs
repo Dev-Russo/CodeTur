@@ -17,9 +17,9 @@ namespace CodeTur.Dominio.Entidades
         {
             AddNotifications(new Contract()
                 .Requires()
-                .IsNotNullOrEmpty(Titulo, "Titulo", "Informe o Título do pacote")
-                .IsNotNullOrEmpty(Descricao, "Descricao", "Informe o Descrição do pacote")
-                .IsNotNullOrEmpty(Imagem, "Imagem", "Informe o Imagem do pacote")
+                .IsNullOrEmpty(Titulo, "Titulo", "Informe o Título do pacote")
+                .IsNullOrEmpty(Descricao, "Descricao", "Informe o Descrição do pacote")
+                .IsNullOrEmpty(Imagem, "Imagem", "Informe o Imagem do pacote")
             );
 
             if (Valid)

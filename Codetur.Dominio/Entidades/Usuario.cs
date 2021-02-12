@@ -53,8 +53,7 @@ namespace Codetur.Dominio.Entidades
         {
             AddNotifications(new Contract()
             .Requires()
-            .HasMinLen(senha, 6, "Senha", "A senha deve ter pelo menos 6 caracteres")
-            .HasMaxLen(senha, 12, "Senha", "A senha deve ter no máximo 12 caracteres")
+            
             );
             if (Valid)
                 Senha = senha;

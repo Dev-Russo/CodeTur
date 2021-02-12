@@ -42,5 +42,10 @@ namespace CodeTur.Testes.Repositorios
         {
             return _usuarios;
         }
+
+        IEnumerable<Usuario> IUsuarioRepositorio.Listar(bool? Ativo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

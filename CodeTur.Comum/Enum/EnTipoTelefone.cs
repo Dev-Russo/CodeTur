@@ -1,4 +1,4 @@
-﻿namespace CodeTur.Shared.Enum
+﻿namespace CodeTur.Comum.Enum
 {
     public enum EnTipoTelefone
     {

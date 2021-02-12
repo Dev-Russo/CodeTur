@@ -117,7 +117,6 @@ namespace CodeTur.Api.Controllers
         }
 
         [Route("")]
-        [Authorize]
         [HttpPut]
         public GenericCommandResult UpdateAccount(
            [FromBody] AlterarUsuarioCommand command,

@@ -19,16 +19,14 @@ namespace CodeTur.Dominio.Handlers.Queries.Usuario
         public ICommandResult Handle(BuscarUsuarioPorIdQuery query)
         {
             var usuario = _repositorio.BuscarPorId(query.IdUsuario);
+            var retorno = new BuscarUsuarioPorIdQueryResult();
 
-            var retorno = new BuscarUsuarioPorIdQueryResult()
-            {
-                Id = usuario.Id,
-                Nome = usuario.Nome,
-                Email = usuario.Email,
-                Telefone = usuario.Telefone,
-                QuantidadeComentarios = usuario.Comentarios.Count,
-                Comentarios = usuario.Comentarios.ToList()
-            };
+            retorno.Id = usuario.Id;
+            retorno.Nome = usuario.Nome;
+            retorno.Email = usuario.Email;
+            retorno.Telefone = usuario.Telefone;
+            retorno.QuantidadeComentarios = usuario.Comentarios.Count;
+            retorno.Comentarios = usuario.Comentarios.ToList();
 
             return new GenericCommandResult(true, "Dados do usuário", retorno);
         }

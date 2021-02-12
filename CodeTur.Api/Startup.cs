@@ -1,8 +1,8 @@
-using Codetur.Dominio.Handlers.Usuarios;
 using Codetur.Dominio.Repositorios;
-using CodeTur.Comum.Handlers.Contracts;
-using CodeTur.Dominio.Handlers.Pacotes;
-using CodeTur.Dominio.Handlers.Usuarios;
+using CodeTur.Dominio.Handlers.Pacote;
+using CodeTur.Dominio.Handlers.Queries.Pacote;
+using CodeTur.Dominio.Handlers.Queries.Usuario;
+using CodeTur.Dominio.Handlers.Usuario;
 using CodeTur.Infra.Data.Contexts;
 using CodeTur.Infra.Data.Repositorios;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -39,11 +39,25 @@ namespace CodeTur.Api
 
             #region Injeção Dependência Usuário
             services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
-            services.AddTransient<CriarContaHandle, CriarContaHandle>();
-            services.AddTransient<LogarHandle, LogarHandle>();
-            services.AddTransient<ListarPacoteQueryHandle, ListarPacoteQueryHandle>();
-            services.AddTransient<IPacoteRepositorio, PacoteRepositorio>();
+            services.AddTransient<CriarContaCommandHandler, CriarContaCommandHandler>();
+            services.AddTransient<AlterarSenhaCommandHandler, AlterarSenhaCommandHandler>();
+            services.AddTransient<LogarCommandHandler, LogarCommandHandler>();
+            services.AddTransient<ResetarSenhaCommandHandler, ResetarSenhaCommandHandler>();
+            services.AddTransient<AlterarUsuarioCommandHandler, AlterarUsuarioCommandHandler>();
+            services.AddTransient<ListarUsuarioQueryHandler, ListarUsuarioQueryHandler>();
+            services.AddTransient<BuscarUsuarioPorIdQueryHandler, BuscarUsuarioPorIdQueryHandler>();
             #endregion
+
+            #region Injeção Dependência Usuário
+            services.AddTransient<IPacoteRepositorio, PacoteRepositorio>();
+            services.AddTransient<AdicionarPacoteHandler, AdicionarPacoteHandler>();
+            services.AddTransient<AlterarPacoteHandler, AlterarPacoteHandler>();
+            services.AddTransient<AlterarImagemHandler, AlterarImagemHandler>();
+            services.AddTransient<AlterarStatusHandler, AlterarStatusHandler>();
+            services.AddTransient<ListarPacoteQueryHandler, ListarPacoteQueryHandler>();
+            services.AddTransient<BuscarPacotePorIdQueryHandler, BuscarPacotePorIdQueryHandler>();
+            #endregion
+
             services.AddDbContext<CodeTurContext>(o => o.UseSqlServer("Data Source=PC-MURILO\\SQLEXPRESS ;Initial Catalog=CodeTur_Dev;user id=sa; password=sa132"));
 
             // JWT
@@ -64,12 +78,11 @@ namespace CodeTur.Api
             services.AddSwaggerGen(o =>
                 o.SwaggerDoc("v1", new OpenApiInfo { Title = "Api CodeTur", Version = "V1" })
             );
+            
 
             
         }
 
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

@@ -39,7 +39,6 @@ namespace CodeTur.Dominio.Queries.Usuario
         public string Telefone { get; set; }
         public string Email { get; set; }
         public string TipoUsuario { get; set; }
-        //Define o tipo como IReadOnlyCollection para definir como somente leitura, usuário não poderá mexer no objeto
         public int QuantidadeComentarios { get; set; }
         public ICollection<Comentario> Comentarios { get; set; }
     }
