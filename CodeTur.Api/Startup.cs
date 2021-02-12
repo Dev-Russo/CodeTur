@@ -60,7 +60,6 @@ namespace CodeTur.Api
 
             services.AddDbContext<CodeTurContext>(o => o.UseSqlServer("Data Source=PC-MURILO\\SQLEXPRESS ;Initial Catalog=CodeTur_Dev;user id=sa; password=sa132"));
 
-            // JWT
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -70,10 +69,10 @@ namespace CodeTur.Api
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = "codetur",
-                        ValidAudience = "codetur",
+                        ValidIssuer = Configuration["Token:issuer"],
+                        ValidAudience = Configuration["Token:audience"],
                         SaveSigninToken = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ChaveSecretaCodeTurSenai132"))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Token:secretKey"]))
                     };
                 });
             services.AddSwaggerGen(o =>
