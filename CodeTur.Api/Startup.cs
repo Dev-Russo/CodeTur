@@ -72,6 +72,7 @@ namespace CodeTur.Api
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = "codetur",
                         ValidAudience = "codetur",
+                        SaveSigninToken = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ChaveSecretaCodeTurSenai132"))
                     };
                 });
